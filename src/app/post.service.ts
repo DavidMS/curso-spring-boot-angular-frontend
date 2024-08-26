@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PostService {
 
-  postApiUrl: string = "http://localhost:8080/api/post";
+  postApiUrl: string = "https://curso-springboot-angular-backend.onrender.com/api/post";
 
   constructor(private http: HttpClient) { }
 
