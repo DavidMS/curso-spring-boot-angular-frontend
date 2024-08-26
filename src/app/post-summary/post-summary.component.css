@@ -1,0 +1,51 @@
+.post-card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  background-color: #d2f2f8;
+}
+
+.post-card-header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px;
+  border-bottom: 3px solid #8495f2;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-card-content {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  height: 180px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}

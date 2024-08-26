@@ -1,0 +1,25 @@
+<div class="form-container">
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Titulo</mat-label>
+            <input matInput formControlName="title" placeholder="Enter the title" />
+            <mat-error *ngIf="postForm.get('title')?.invalid">Introduce un título</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Contenido</mat-label>
+            <textarea matInput formControlName="body" placeholder="Enter the content" class="textarea-content"></textarea>
+            <mat-error *ngIf="postForm.get('body')?.invalid">Introduce un contenido</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Autor</mat-label>
+            <input matInput formControlName="author" placeholder="Enter the author's name" />
+            <mat-error *ngIf="postForm.get('author')?.invalid">Introduce un autor</mat-error>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="postForm.invalid">Crear Post</button>
+        </div>
+    </form>
+</div>

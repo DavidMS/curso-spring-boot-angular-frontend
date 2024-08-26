@@ -1,0 +1,9 @@
+<div class="posts-container">
+    <div class="grid-container">
+        <mat-grid-list class="post-tile" cols="2" gutterSize="20px" rowHeight="2:1" class="grid-list">
+            <mat-grid-tile *ngFor="let post of posts">
+                <app-post-summary [post]="post" (reloadData)="loadData()"></app-post-summary>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.posts-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ededf7;
+}
+
+.post-tile {
+  padding: 5px; /* Reducir padding alrededor de las tarjetas */
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.grid-list {
+  width: 100%;
+  margin: 0;
+  gap: 10px; /* Espacio entre las tarjetas */
+}

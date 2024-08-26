@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2fc;
+}
+
+
+.example-icon {
+  color: white;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.menu-icon {
+  margin-right: 15px;
+}
