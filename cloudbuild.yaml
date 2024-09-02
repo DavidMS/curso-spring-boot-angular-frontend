@@ -9,7 +9,7 @@ steps:
     npm -v
     # Clean and reinstall dependencies
     rm -rf node_modules package-lock.json
-    npm install
+    npm install --legacy-peer-deps
 
 - name: 'node:20'
   args: ['npm', 'run', 'build', '--prod']
