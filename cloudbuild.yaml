@@ -1,13 +1,26 @@
 steps:
+- name: 'gcr.io/cloud-builders/nodejs'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    # Install Node.js 20
+    curl -sL https://deb.nodesource.com/setup_20.x | bash -
+    apt-get install -y nodejs
+    node -v
+    npm -v
+    # Clean and reinstall dependencies
+    rm -rf node_modules package-lock.json
+    npm install
 
 - name: gcr.io/cloud-builders/npm
-  args: [ install ]
+  args: ['install']
 
 - name: gcr.io/cloud-builders/npm
-  args: [ run, build, --prod ]
+  args: ['run', 'build', '--prod']
 
 - name: gcr.io/cloud-builders/gcloud
-  args: [ app, deploy, --version=$SHORT_SHA ]
+  args: ['app', 'deploy', '--version=$SHORT_SHA']
 
 options:
   logging: CLOUD_LOGGING_ONLY
