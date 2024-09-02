@@ -5,7 +5,7 @@ steps:
   - '-c'
   - |
     # Install Node.js 20
-    curl -sL https://deb.nodesource.com/setup_20.x | bash -
+    curl -sL https://deb.nodesource.com/setup_18.x | bash -
     apt-get install -y nodejs
     node -v
     npm -v
