@@ -1,5 +1,5 @@
-<mat-card class="post-card" appearance="outlined" [routerLink]="['/post', post.id]" routerLinkActive="router-link-active" >
-    <mat-card-header class="post-card-header">
+<mat-card class="post-card" appearance="outlined">
+    <mat-card-header class="post-card-header" [routerLink]="['/post', post.id]" routerLinkActive="router-link-active" >
         <mat-card-title>{{ post.title | truncate:45:true:' [...]' }}</mat-card-title>
     </mat-card-header>
     <mat-card-content class="post-card-content">

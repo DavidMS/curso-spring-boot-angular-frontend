@@ -1,0 +1,11 @@
+runtime: python312
+app_engine_apis: true
+
+handlers:
+- url: /
+  static_files: dist/frontend/browser/index.html
+  upload: dist/frontend/browser/index.html
+
+- url: /(.*)
+  static_files: dist/frontend/browser/\1
+  upload: dist/frontend/browser/(.*)
